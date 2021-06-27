@@ -1,0 +1,287 @@
+<!-- This file contains a few elements adapted from the online tutoral -->
+<!-- on Bootstrap 5 as found here: https://getbootstrap.com/docs/5.0/getting-started/introduction/-->
+<!-- as well as JQuery found here: https://www.w3schools.com/jquery/default.asp -->
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<!-- The head should contain an appropriate title for your site -->
+<head>
+    <title>LightningPhysio Site</title>
+    <!--Its mee-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+   <!-- Style sheet (CSS) and JavaScript scripts necessary to use Bootstrap -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>    
+
+
+
+    <!-- Style sheet (CSS) and JavaScript scripts necessary to use JQuery as well as JQueryUI library -->
+    <!-- which is built on top of JQuery and offers additional possibilities -->
+    <!-- For example, JQuery UI has a datepicker which is popular and that we can use -->
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/excite-bike/jquery-ui.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+   
+
+    <!-- Your own script -->
+    <script src="scripts/service.js"></script>
+
+
+    <!-- Your own additional style sheet -->
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+
+    
+
+    
+</head>
+
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+    <!-- Medium size container, padding 3, margins 3, background dark, text is white -->
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+        <!-- Brand/logo -->
+        <a class="navbar-brand" href="#">
+            <img src="images/mainIcon.png" alt="Logo" style="width:40px;">       
+        </a> 
+            <!-- Links -->
+        <ul class="navbar-nav ">
+          <li class="nav-item">
+            <a class="nav-link" href="#section1"><img src="images/icon1.png" alt="services" style="width:40px;"> Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#section2"><img src="images/expertsIcon.png" alt="experts" style="width:40px;"> Experts</a>
+          </li>
+         </ul>
+         <div class="justify-content-end">
+            <button type="button" class="btn btn-primary" onClick="document.getElementById('section3').scrollIntoView();">Book now</button>
+         </div>
+      </nav>
+     
+    <section class="d-sm-flex bg-blue text-black p5 text-center">
+        <!--Use container so that the text alligns with "LightningPhysio"-->
+        <div class="container">
+            <div class="d-sm-flex">
+                <!--small screens splits it into many ro-->
+                
+                <div>
+                    <h3 class="about d-m-flex" id=about>Welcome to Lightningphysio</h3>
+                    <!--ContentAboveImage-->
+                    <br>
+                    <g>
+                        Get your pain diagnosed and treated by some of the best (vetted & highly-rated) Physiotherapists in Canada.
+                        Our physiotherapists will ask you questions to assess your injury, understand your levels of pain
+                        and show you how to perform the exercises that will help you recover.
+                    </g>
+                    
+                </div>
+                <!--ImageBackground-->
+                <!--class= "img-fluid w-50"-->
+
+                <!--so that the image is bound into the contaner use class="img-fluid w-50 half the size"-->
+
+            </div>
+
+        </div>
+    </section>
+<!--  -->
+    <div class="container">
+       
+        <div class="alert alert-danger" role="alert">
+            <strong>Please note: </strong>Due to COVID-19 pandemic appointments will be put in a waitlist.
+        </div>
+    </div>
+
+
+
+     <!-- Might be (or not) useful to show some information to the user -->
+     <div id= "section1" class="container">
+        <br>
+        <br>
+        <h2>Services <img src="images/icon1.png" alt="services" style="width:40px;"> </h2>
+        <p>Here is a list of services offered</p>            
+        <table class="table table-info table-hover">
+            <thead>
+            <tr>
+                <th>Service</th>
+                <th>Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Custom knee brace </td>
+                <td><p>Limit injury and speed recovery with a custom knee brace.  $175</p>
+                    <img src="images/ckneeBrace.jpeg" class="img-thumbnail" height="10%" width="35%">
+                </td>
+            </tr>
+            <tr>
+                <td>TMG  Rehabilitation</td>
+                <td><p> Improve and maintan healthy muscle by measuring mechanical responses. Used by Professionnel atlethes to identify and trace injuries for longlasting performance. $275</p>
+                    <img src="images/TMG.jpeg" class="img-thumbnail" height= 125 width=600>
+                </td>
+            </tr>
+            <tr>
+                <td>Compression stocks</td>
+                <td><p>A relief from tired, aching legs and swollen feet to enhancing sporting performance. $95</p>
+                    <img src="images/compression.jpeg" class="img-thumbnail"height="10%" width="63%" >
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Card columns allows multiple cards next to each other -->
+    <!-- The first card's button doesn't go anywhere, it could be a modal --> 
+    <!-- My second card limits the information seen and uses collapsible to show more -->
+    <!-- -->
+    <div id= "section2" div class="container p-3">
+        <br>
+        <br>
+        <h2>Meet our Practitionners <img src="images/expertsIcon.png" alt="experts" style="width:40px;">
+        </h2> </div>
+    <div class="d-m-flex">
+        <section class="boxes p-5">
+            <div class="container">
+                <div class="row text-center g-4">
+                    <div class="col-md" id="expert1">
+                        <div class="card bg-light">
+                            <div class="card-body text-center" id=zero>
+                                <div class="sp1-image-wrapper">
+                                    <img src="images/p1.jpeg" alt="error">
+                                </div>
+                                <p class="specialist-name">Dr. Jasmine Hadid</p>
+                                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#profile1" aria-expanded="false" aria-controls="collapseExample">See profile</button>
+                                <div class="collapse" id="profile1">
+                                    <div class="card card-body">
+                                        Dr. Jasmine Hadid is a highly skilled registered physiotherapist with more than 10 years of experience 
+                                        and is passionate about preventive health care guidance and techniques.
+                                        She offers a variety of in-house services, including physical examinations, and vaccinations screenings. 
+                                        Take advantage of the many benefits preventive health services layla regularly provides
+
+                                    </div>
+                                </div>
+                        </div>
+    
+    
+                    </div>
+                    
+                    <div class="col-md">
+                        <!--EXPERT3-->
+
+                        <div class="card bg-light">
+                            <div class="card-body text-center" id=zero>
+                                <div class="sp1-image-wrapper">
+                                    <img src="images/p2.jpeg" alt="error">
+                                </div>
+                                <p class="specialist-name">Dr. Halo Harris</p>
+                                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#profile2" aria-expanded="false" aria-controls="collapseExample">See profile</button>
+                                <div class="collapse" id="profile2">
+                                    <div class="card card-body">
+                                        Dr. Halo harris is a graduate of University of Yale with a Physical Health and Education Degree. 
+                                        From there, he attained his Doctor of Chiropractic from the Yale Chiropractic College. 
+                                        As a Chiropractor, Dr. Halo Harris has a wide and varied knowledge of therapeutic rehabilitation 
+                                        which fits closely with the TMG rehabilitation. With his extensive knowledge 
+                                        in rehabilitation and sports specific training, he was selected to direct the 2003 Olympic Trials medical team.
+                                      </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+        </section>
+
+    </div>
+
+
+
+
+    <div id= "section3" div class="card">
+        <br>
+        <br>
+        <div class="card-header">
+            <a class="collapsed card-link" data-toggle="collapse" href="#collapseClientInfo">Your info</a>
+        </div>
+    </div>
+
+    <div class="card-body">
+        <p>Please enter your information so we can contact you</p>
+
+        <div class="form-group" id="third">
+            <p>Name: <input type="text" id="nameInput"></p>
+            <label for="phone">Phone number:</label>
+            <input type="tel" id="phone" name="phone"  placeholder="(123) 123-4567" required>
+        </div>
+        <h3>Payment <img src="images/paymentIcon.jpeg" alt="payment" style="width:50px;"> </h3>
+
+        <label for="credit">Credit card:</label>
+        <input type="text" id="credit" name="creditCard"  placeholder="1234 1234 1234 1234" required>
+        
+        <br>
+        <div class="input-group mt-3 mb-3" id="sl2">
+            <div class="input-group-prepend">
+                <select class="form-control" id="sel1">
+                    <option>Select a service:</option>
+                    <option>Custom knee brace</option>
+                    <option>TMG  Rehabilitation</option>
+                    <option>Compression stocks</option>
+                </select>
+            </div>
+            <div class="input-group-prepend">
+                <select class="form-control" id="sel2">
+                    <option>Select a Expert:</option>
+                    <option>Jasmine</option>
+                    <option>Halo</option>
+                </select>
+            </div>
+            <div class="input-group-prepend">
+                <input type="text" id="datetimepicker1" class="input-group date" id="datetimepicker1" data-target-input="nearest">
+                <div class="input-group-append" data-target="#datetimepicker1" data-toggle="datetimepicker1">
+                    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                </div>
+            </div>
+
+            <div class="input-group-prepend">
+                <button type="button" class="btn btn-primary" onClick="validateAll()">Book now</button>
+            </div>
+        </div>
+        <div id="sl1">
+            
+        </div>
+    </div>
+
+    <div class="container-fluid bg-dark text-white">
+        <br>
+        <br>
+        <h2> Contact us </h2>
+        <div class="row">
+            <div class="col-sm-4">
+                <p> <i class="fas fa-map-marker-alt"></i><nbsp></nbsp> <nbsp></nbsp>2020 Yonge st Toronto  </p>
+                <p><i class='fas fa-phone'></i> <nbsp></nbsp> <nbsp></nbsp> (416) 312-5789</p>
+            </div>
+            <div class="col-sm-7 text-right"> 
+                <h3>Buisness hours</h3>   
+                Mon: 10am - 5pm <br>
+                Tue - Fri: 8am - 8pm <br>
+                Sat - Sun: CLOSED <br>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    $(document).ready(function(){
+      $('[data-toggle="tooltip"]').tooltip();   
+    });
+    </script>
+</html>
