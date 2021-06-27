@@ -1,0 +1,52 @@
+/* Style sheet
+   color picker www.w3schools.com/colors/colors_picker.asp
+*/
+
+/* Bootstrap default font-family is Helvetica Neue */
+h1 {
+   font-family: "Times New Roman", Times, serif;
+    /* font-size: 60px;
+    text-align: center;
+    margin: 0;
+    padding: 20px 0;
+   color: #ff00ff;  
+   */
+ }
+
+ 
+ .error {
+   background-color: yellow;
+   color : red;
+ }
+ 
+ 
+ .showInput {
+   background-color: pink;
+ }
+ .about{
+  font-family:Proxima Nova Bold;
+  display: block;
+  font-size: 1.5em;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  line-height: 2.5rem;
+
+}
+#about{
+  margin: 70px;
+  
+}
+.bg-blue{
+  background-repeat:no-repeat;
+  background-size:cover;
+  height:450px; 
+  background-image: linear-gradient(rgba(238, 199, 125, 0.849),rgba(255, 166, 0, 0.795));
+
+}
+g{
+  font-size: 18px;
+  color: white;
+}
